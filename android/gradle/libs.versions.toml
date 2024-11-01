@@ -1,0 +1,19 @@
+[versions]
+buildToolsVersion = "34.0.0"
+minSdkVersion = "24"
+compileSdkVersion = "35"
+targetSdkVersion = "34"
+ndkVersion = "26.1.10909125"
+kotlin = "1.9.24"
+agp = "8.5.0"
+
+[libraries]
+android-jsc = { module = "org.webkit:android-jsc" }
+hermes-android = { module = "com.facebook.react:hermes-android" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+react-android = { module = "com.facebook.react:react-android" }
+react-native-gradle-plugin = { module = "com.facebook.react:react-native-gradle-plugin" }
+
+[plugins]
+
