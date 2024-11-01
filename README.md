@@ -9,3 +9,6 @@
 
 #### key/value storage
 - react-native-mmkv ^3.1.0
+
+#### navigation
+- react-navigation 6
