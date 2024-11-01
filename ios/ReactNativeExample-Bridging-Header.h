@@ -1,6 +1,6 @@
 //
-//  KotlinDslExample_Bridging_Header_h
-//  KotlinDslExample
+//  ReactNativeExample_Bridging_Header_h
+//  ReactNativeExample
 //
 //  Created by kingsword09 on 2024/10/31.
 //
@@ -8,8 +8,8 @@
 //
 // @see https://github.com/OneKeePass/mobile/blob/e75d947317bc6f543aa246bac4d79e5dc0f341e4/ios/OneKeePassMobile-Bridging-Header.h
 
-#ifndef KotlinDslExample_Bridging_Header_h
-#define KotlinDslExample_Bridging_Header_h
+#ifndef ReactNativeExample_Bridging_Header_h
+#define ReactNativeExample_Bridging_Header_h
 
 #import <React/RCTBridgeModule.h>
 #import <React/RCTBridge.h>
@@ -28,4 +28,4 @@
 // deep linking and Universal linking
 #import <React/RCTLinkingManager.h>
 
-#endif /* KotlinDslExample_Bridging_Header_h */
+#endif /* ReactNativeExample_Bridging_Header_h */

@@ -66,9 +66,9 @@ android {
     buildToolsVersion = libs.versions.buildToolsVersion.get()
     compileSdk = libs.versions.compileSdkVersion.get().toInt()
 
-    namespace = "com.kotlindslexample"
+    namespace = "com.reactnativeexample"
     defaultConfig {
-        applicationId = "com.kotlindslexample"
+        applicationId = "com.reactnativeexample"
         minSdk = libs.versions.minSdkVersion.get().toInt()
         targetSdk = libs.versions.targetSdkVersion.get().toInt()
         versionCode = 1

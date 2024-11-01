@@ -14,7 +14,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'KotlinDslExample' do
+target 'ReactNativeExample' do
   config = use_native_modules!
 
   use_react_native!(
@@ -23,7 +23,7 @@ target 'KotlinDslExample' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'KotlinDslExampleTests' do
+  target 'ReactNativeExampleTests' do
     inherit! :complete
     # Pods for testing
   end

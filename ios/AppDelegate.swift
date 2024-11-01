@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  KotlinDslExample
+//  ReactNativeExample
 //
 //  Created by kingsword09 on 2024/10/31.
 //
@@ -11,7 +11,7 @@ import Foundation
 @UIApplicationMain
 class AppDelegate: RCTAppDelegate {
   override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-    self.moduleName = "KotlinDslExample"
+    self.moduleName = "ReactNativeExample"
     self.initialProps = [:]
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
