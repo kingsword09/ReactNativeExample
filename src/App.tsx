@@ -8,6 +8,7 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -24,6 +25,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import {usePersistanceStore} from './store/usePersistanceStore';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -56,6 +58,7 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 }
 
 function App(): React.JSX.Element {
+  const {count, increment, decrement, reset} = usePersistanceStore();
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -76,6 +79,12 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <View>
+            <Text>{count}</Text>
+            <Button title="add" onPress={() => increment(count)} />
+            <Button title="subtract" onPress={() => decrement(count)} />
+            <Button title="reset" onPress={reset} />
+          </View>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
