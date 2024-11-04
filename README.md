@@ -12,3 +12,14 @@
 
 #### navigation
 - react-navigation 6
+
+#### bottom tabs
+- react-native-bottom-tabs ^0.3.1
+
+#### icons
+- react-native-vector-icons ^10.2.0
+
+#### i18n
+- i18next ^23.16.4
+- react-i18next ^15.1.0
+- react-native-localize ^3.3.0
