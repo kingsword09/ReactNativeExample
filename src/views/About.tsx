@@ -5,7 +5,7 @@ import {Button} from 'react-native';
 const About = ({navigation: {navigate}}: StackAboutProps) => {
   return (
     <Fragment>
-      <Button title="home" onPress={() => navigate('Home')} />
+      <Button title="first" onPress={() => navigate('First')} />
     </Fragment>
   );
 };

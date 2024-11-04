@@ -1,9 +1,9 @@
 import React, {Fragment} from 'react';
-import {StackHomeProps} from '../navigation/navigation';
+import {StackFirstProps} from '../navigation/navigation';
 import {Button, Text, View} from 'react-native';
 import {usePersistanceStore} from '../store/usePersistanceStore';
 
-const Home = ({navigation: {navigate}}: StackHomeProps) => {
+const First = ({navigation: {navigate}}: StackFirstProps) => {
   const {count, increment, decrement, reset} = usePersistanceStore();
   return (
     <Fragment>
@@ -18,4 +18,4 @@ const Home = ({navigation: {navigate}}: StackHomeProps) => {
   );
 };
 
-export default Home;
+export default First;
