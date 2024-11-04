@@ -18,23 +18,37 @@ import {
   DefaultTheme,
   createNavigationContainerRef,
 } from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import loadable from '@loadable/component';
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+import {createNativeBottomTabNavigator} from 'react-native-bottom-tabs/react-navigation';
+import loadable from '@loadable/component';
+import {BottomTabParamList} from './navigation/bottomTabs';
+
 const navigationRef = createNavigationContainerRef<RootStackParamList>();
-const Home = loadable(() => import('~/views/Home'));
-const About = loadable(() => import('~/views/About'));
+
+const HomeTab = loadable(() => import('~/screens/Home'));
+const My = loadable(() => import('~/screens/My'));
+
+/// bottom-tab
+const BottomTabs = createNativeBottomTabNavigator<BottomTabParamList>();
+
 const NavigationScreen = ({ready = false}: NavigationScreenProps) => {
   if (ready) {
     console.log('isReady!!!');
   }
   return (
     <ErrorBoundary fallbackRender={ErrorFallback}>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="About" component={About} />
-      </Stack.Navigator>
+      <BottomTabs.Navigator ignoresTopSafeArea={true}>
+        <BottomTabs.Screen
+          name="Home"
+          options={{title: 'Home', tabBarIcon: () => ({sfSymbol: 'house'})}}
+          component={HomeTab}
+        />
+        <BottomTabs.Screen
+          name="My"
+          options={{title: 'My', tabBarIcon: () => ({sfSymbol: '0.circle'})}}
+          component={My}
+        />
+      </BottomTabs.Navigator>
     </ErrorBoundary>
   );
 };
