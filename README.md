@@ -23,3 +23,6 @@
 - i18next ^23.16.4
 - react-i18next ^15.1.0
 - react-native-localize ^3.3.0
+
+#### animated
+- react-native-reanimated ^3.16.1
