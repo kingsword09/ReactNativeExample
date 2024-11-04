@@ -18,6 +18,7 @@ import {
   DefaultTheme,
   createNavigationContainerRef,
 } from '@react-navigation/native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import {createNativeBottomTabNavigator} from 'react-native-bottom-tabs/react-navigation';
 import loadable from '@loadable/component';
@@ -40,12 +41,32 @@ const NavigationScreen = ({ready = false}: NavigationScreenProps) => {
       <BottomTabs.Navigator ignoresTopSafeArea={true}>
         <BottomTabs.Screen
           name="Home"
-          options={{title: 'Home', tabBarIcon: () => ({sfSymbol: 'house'})}}
+          options={{
+            title: 'Home',
+            tabBarLabel: 'Home',
+            tabBarIcon: ({focused}) =>
+              focused
+                ? MaterialCommunityIcons.getImageSourceSync('home-account', 24)
+                : MaterialCommunityIcons.getImageSourceSync(
+                    'home-alert-outline',
+                    24,
+                  ),
+          }}
           component={HomeTab}
         />
         <BottomTabs.Screen
           name="My"
-          options={{title: 'My', tabBarIcon: () => ({sfSymbol: '0.circle'})}}
+          options={{
+            title: 'My',
+            tabBarLabel: 'My',
+            tabBarIcon: ({focused}) =>
+              focused
+                ? MaterialCommunityIcons.getImageSourceSync('account', 24)
+                : MaterialCommunityIcons.getImageSourceSync(
+                    'account-outline',
+                    24,
+                  ),
+          }}
           component={My}
         />
       </BottomTabs.Navigator>
